@@ -24,7 +24,7 @@
             position: relative;
         }
 
-        a::after {
+        nav a::after {
             content: "";
             position: absolute;
             background-color: white;
@@ -36,7 +36,7 @@
             box-sizing: border-box;
         }
 
-        a:hover:after {
+        nav a:hover:after {
             width: 100%;
         }
 
@@ -83,6 +83,11 @@
 
         #x {
             width: 100%;
+        }
+        #checkout{
+            background-color: rgb(156, 147, 147);
+            color:black;
+            padding: 20px;;
         }
     </style>
     <script>
@@ -146,7 +151,15 @@
         </nav>
         <h1 id="head" class="text-center">NOVAWEAR</h1>
         <h3 class="text-center">Shopping Bag</h3>
-        
+        <div class="d-flex flex-wrap " style="padding:20px;">
+            <div class="col-lg-9">
+
+            </div>
+            <div id="checkout" class="col-lg-3 text-center">
+                <h5 class="text-center">Total Amount : <span> 0$</span></h5>
+                <button class="btn btn-outline-dark "><a target="_blank" href="./checkout.html">CheckOut</a></button>
+            </div>
+        </div>
     </div>
 </body>
 
