@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Cart | NOVAWEAR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tektur">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: black;
+            font-family: Tektur;
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            background-color: white;
+            height: 2px;
+            width: 0;
+            left: 0px;
+            bottom: 0px;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        nav a:hover:after {
+            width: 100%;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .container-fluid {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar li a {
+            color: white;
+            position: relative;
+        }
+
+        .navbar li a::after {
+            background-color: black;
+        }
+
+        nav {
+            background-color: #292828;
+            transition: 0.5s;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        #nav2 {
+            margin-right: 30px;
+        }
+
+        #nav2 a::after {
+            width: 0%;
+        }
+
+        #login:hover {
+            border-color: black;
+        }
+
+        #x {
+            width: 100%;
+        }
+        #checkout{
+            background-color: rgb(156, 147, 147);
+            color:black;
+            padding: 20px;;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("nav").mouseenter(function () {
+                $("nav").css({ "background-color": "white" });
+                $(".navbar-link").css({ "color": "black" });
+            });
+
+            $("nav").mouseleave(function () {
+                $("nav").css({ "background-color": "#292828" });
+                $(".navbar-link").css({ "color": "white" });
+            });
+            $("#head").click(function () {
+                window.location.href = "../index.html";
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm sticky-top navbar-light d-flex justify-content-between">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navigation">
+                <div id="x" class="d-flex justify-content-between">
+                    <ul id="nav1" class="navbar-nav">
+                        <li class="navbar-item active">
+                            <a class="navbar-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="./Men.html">Men</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="./Women.html">Women</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="./Accessories.html">Accessories</a>
+                        </li>
+                    </ul>
+                    <ul id="nav2" class="navbar-nav">
+                        <li class="navbar-item">
+                            <button id="login" class="btn btn-outline-light"><a class="navbar-link"
+                                    href="./Login.html">Log in</a></button>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="./userprofile.html"><span class="fa fa-user-circle"
+                                    style="font-size: 30px;"></span></a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href=""><span class="fa fa-shopping-bag"
+                                    style="font-size: 20px;"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1 id="head" class="text-center">NOVAWEAR</h1>
+        <h3 class="text-center">Shopping Bag</h3>
+        <div class="d-flex flex-wrap " style="padding:20px;">
+            <div class="col-lg-9">
+
+            </div>
+            <div id="checkout" class="col-lg-3 text-center">
+                <h5 class="text-center">Total Amount : <span> 0$</span></h5>
+                <button class="btn btn-outline-dark "><a target="_blank" href="./checkout.html">CheckOut</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
